@@ -199,6 +199,8 @@ def generate_build_info(args):
 
   print(f"ro.build.id?={config['BuildId']}")
 
+  print(f"ro.build.fingerprint?={config['BuildFingerprint']}")
+
   # ro.build.display.id is shown under Settings -> About Phone
   if config["BuildVariant"] == "user":
     # User builds should show:
