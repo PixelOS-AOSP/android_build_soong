@@ -300,3 +300,6 @@ org\.ifaa\.android\.manager.*
 
 # Lineage HALs
 vendor\.lineage\..*
+
+# MTK adds
+com\.mediatek\..*
