@@ -120,8 +120,8 @@ def parse_args():
   if args.build_thumbprint_file:
     config["BuildThumbprint"] = args.build_thumbprint_file.read().strip()
 
-  config["LineageDesc"] = config["BuildDesc"]
-  config["LineageDevice"] = config["DeviceName"]
+  config["CustomDesc"] = config["BuildDesc"]
+  config["CustomDevice"] = config["DeviceName"]
 
   if config["BuildNumber"].startswith("eng."):
     config["BuildNumber"] = config["DateUtc"]
@@ -225,7 +225,7 @@ def generate_build_info(args):
       print(f"ro.build.display.id?={config['BuildId']} {config['BuildKeys']}")
   else:
     # Non-user builds should show detailed build information (See build desc above)
-    print(f"ro.build.display.id?={config['LineageDesc']}")
+    print(f"ro.build.display.id?={config['CustomDesc']}")
   print(f"ro.build.version.incremental={config['BuildNumber']}")
   print(f"ro.build.version.sdk={config['Platform_sdk_version']}")
   print(f"ro.build.version.sdk_full={config['Platform_sdk_version_full']}")
@@ -253,7 +253,7 @@ def generate_build_info(args):
   # flavor (via a dedicated lunch config for example).
   print(f"ro.build.flavor={config['BuildFlavor']}")
 
-  print(f"ro.lineage.device={config['LineageDevice']}")
+  print(f"ro.custom.device={config['CustomDevice']}")
 
   # These values are deprecated, use "ro.product.cpu.abilist"
   # instead (see below).
