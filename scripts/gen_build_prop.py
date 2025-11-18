@@ -209,7 +209,7 @@ def generate_build_info(args):
   print(f"ro.build.fingerprint?={config['BuildFingerprint']}")
 
   # ro.build.display.id is shown under Settings -> About Phone
-  if config["BuildVariant"] == "user":
+  if config["BuildVariant"] != "eng":
     # User builds should show:
     # release build number or branch.buld_number non-release builds
 
