@@ -259,3 +259,7 @@ vendor\.lineage\..*
 # Lineage adds
 lineageos\.platform
 org\.lineageos\.platform\.internal
+
+###################################################
+# Camera Extensions
+com.camera.camera2.extensions.*
