@@ -16,6 +16,24 @@
       "message": "Is there anything that we want to allow which starts not with existing one?",
       "revId": "d9b2caf24366ff6b1e0f4e391cc7f4da9ec3be26",
       "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff6b56c9_e5e039dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-03-31T08:24:38Z",
+      "side": 1,
+      "message": "https://github.com/xiaomi-mt6895-devs/android_device_xiaomi_mt6895-common/commit/4369b68e84ab373fb338844d1b35434b1b0fd360 this commit builds a package named mediatek.common which wouldn\u0027t match the old mediatek.app\\..*\n\nUpstream lineage commit:- https://github.com/LineageOS/android_build_soong/commit/bd2f66c6653fafe8da0b72fa1e06fb529c8c3314",
+      "parentUuid": "342e8214_0482a749",
+      "revId": "d9b2caf24366ff6b1e0f4e391cc7f4da9ec3be26",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
     }
   ]
 }
