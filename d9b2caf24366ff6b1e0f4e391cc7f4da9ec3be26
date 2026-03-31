@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "342e8214_0482a749",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-03-31T03:23:45Z",
+      "side": 1,
+      "message": "Is there anything that we want to allow which starts not with existing one?",
+      "revId": "d9b2caf24366ff6b1e0f4e391cc7f4da9ec3be26",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    }
+  ]
+}
