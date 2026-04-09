@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df0673b9_db88173b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-04-09T13:55:19Z",
+      "side": 1,
+      "message": "well guess what, we need this too but I think its worth it for camera quality, also a lot of Xiaomi devices support camerax vendor so its all good right?",
+      "revId": "af8586b999cbef0c56584353051542b01d3f3e99",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    }
+  ]
+}
