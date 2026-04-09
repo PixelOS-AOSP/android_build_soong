@@ -16,6 +16,24 @@
       "message": "needed for CameraX extensions support which i think we should add as its going to become more common",
       "revId": "7246dd4bb0042385033c5102df9e5cc52995791f",
       "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddf9e83a_2eb4e6bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-04-09T10:35:43Z",
+      "side": 1,
+      "message": "It should\u0027ve been added by AOSP then?",
+      "parentUuid": "85547480_712382a1",
+      "revId": "7246dd4bb0042385033c5102df9e5cc52995791f",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
     }
   ]
 }
