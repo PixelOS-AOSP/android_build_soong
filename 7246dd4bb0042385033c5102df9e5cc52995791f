@@ -69,6 +69,24 @@
       "message": "Wrong author? https://github.com/crdroidandroid/android_build_soong/commit/61ff922eaa466537a82e0d3d0aab900dfe8edc0e",
       "revId": "7246dd4bb0042385033c5102df9e5cc52995791f",
       "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ac1fb82_5c04d207",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-04-09T11:19:15Z",
+      "side": 1,
+      "message": "Well technically the author is CODEX but nonetheless 👍🏻",
+      "parentUuid": "cf700503_771498f6",
+      "revId": "7246dd4bb0042385033c5102df9e5cc52995791f",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
     }
   ]
 }
