@@ -308,3 +308,6 @@ org\.ifaa\.android\.manager.*
 
 # Lineage HALs
 vendor\.lineage\..*
+###################################################
+# Camera Extensions
+com.camera.camera2.extensions.*
