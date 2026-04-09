@@ -87,6 +87,24 @@
       "parentUuid": "cf700503_771498f6",
       "revId": "7246dd4bb0042385033c5102df9e5cc52995791f",
       "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42b197ee_38962199",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000034
+      },
+      "writtenOn": "2026-04-09T11:38:54Z",
+      "side": 1,
+      "message": "What about the original commit\u0027s metadata? @info.hridayaprajapati@gmail.com wouldn\u0027t it be better to push the original commit as another change? Rest is your choice",
+      "parentUuid": "2ac1fb82_5c04d207",
+      "revId": "7246dd4bb0042385033c5102df9e5cc52995791f",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
     }
   ]
 }
