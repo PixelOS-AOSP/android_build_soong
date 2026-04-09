@@ -34,6 +34,24 @@
       "parentUuid": "85547480_712382a1",
       "revId": "7246dd4bb0042385033c5102df9e5cc52995791f",
       "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a353c43_31e23ac2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-04-09T10:49:12Z",
+      "side": 1,
+      "message": "well as far as I know vendor specific so for xaga, Xiaomi has it ig really depends of OEM. My tree [commit](https://github.com/pixelos-xaga/android_device_xiaomi_mt6895-common/commit/10479b58967c7b5e549dbe307795671fbbcf6435)",
+      "parentUuid": "ddf9e83a_2eb4e6bc",
+      "revId": "7246dd4bb0042385033c5102df9e5cc52995791f",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
     }
   ]
 }
