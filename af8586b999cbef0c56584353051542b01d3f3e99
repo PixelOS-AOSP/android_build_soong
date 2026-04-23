@@ -68,6 +68,41 @@
       "parentUuid": "2204c1c3_7404ae02",
       "revId": "af8586b999cbef0c56584353051542b01d3f3e99",
       "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2a0fa6b_8c54bc5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-04-23T14:11:21Z",
+      "side": 1,
+      "message": "https://github.com/pixelos-xaga/android_device_xiaomi_mt6895-common/commit/a407e62f25419f59784f9c6f783df7d0c5115d9e we need camera extent",
+      "revId": "af8586b999cbef0c56584353051542b01d3f3e99",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbae4adc_57c62181",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-04-23T14:11:21Z",
+      "side": 1,
+      "message": "camera extension like this https://github.com/xiaomi-goya-devs/android_device_xiaomi_goya/commit/97d483907b4114b4d2258437b7fb7f4f3c1d2894",
+      "parentUuid": "a0749cef_0fe66cea",
+      "revId": "af8586b999cbef0c56584353051542b01d3f3e99",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
     }
   ]
 }
