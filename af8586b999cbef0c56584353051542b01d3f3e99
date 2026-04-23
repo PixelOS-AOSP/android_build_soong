@@ -50,6 +50,24 @@
       "message": "What is this chain even for?",
       "revId": "af8586b999cbef0c56584353051542b01d3f3e99",
       "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0749cef_0fe66cea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-04-23T13:10:01Z",
+      "side": 1,
+      "message": "camera x vendor see https://review.pixelos.net/c/PixelOS-AOSP/android_build_soong/+/7383/4",
+      "parentUuid": "2204c1c3_7404ae02",
+      "revId": "af8586b999cbef0c56584353051542b01d3f3e99",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
     }
   ]
 }
