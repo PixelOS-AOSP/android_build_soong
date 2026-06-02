@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e3fec6a_847ce72a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-06-02T14:13:11Z",
+      "side": 1,
+      "message": "Newer Xiaomi IMS stack requires this",
+      "revId": "2bb5fb8d1e033a67e506fa58cab67676cc3e9134",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    }
+  ]
+}
