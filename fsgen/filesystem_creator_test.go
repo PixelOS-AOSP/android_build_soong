@@ -798,6 +798,41 @@ override_android_app {
 	android.AssertBoolEquals(t, "Override app should be added to the same partition as the `base`", true, overrideAppInSystemExt)
 }
 
+func TestReportsAllNamespaceConflictsTogether(t *testing.T) {
+	android.GroupFixturePreparers(
+		android.PrepareForIntegrationTestWithAndroid,
+		android.PrepareForTestWithAndroidBuildComponents,
+		android.PrepareForTestWithAllowMissingDependencies,
+		prepareForTestWithFsgenBuildComponents,
+		prepareMockRamdiksNodeList,
+		android.PrepareForTestWithNamespace,
+		phony.PrepareForTestWithPhony,
+		android.FixtureMergeMockFs(android.MockFS{
+			"build/soong/fsgen/Android.bp": []byte(`
+				soong_filesystem_creator {
+					name: "foo",
+				}`),
+			"namespace_a/Android.bp": []byte(`
+				soong_namespace {}
+				phony { name: "conflict_one" }
+				phony { name: "conflict_two" }
+			`),
+			"namespace_b/Android.bp": []byte(`
+				soong_namespace {}
+				phony { name: "conflict_one" }
+				phony { name: "conflict_two" }
+			`),
+		}),
+		android.FixtureModifyConfig(func(config android.Config) {
+			config.TestProductVariables.NamespacesToExport = []string{"namespace_a", "namespace_b"}
+			config.TestProductVariables.PartitionVarsForSoongMigrationOnlyDoNotUse.ProductPackagesSet =
+				createProductPackagesSet([]string{"conflict_one", "conflict_two"})
+		}),
+	).ExtendWithErrorHandler(android.FixtureExpectsOneErrorPattern(
+		`(?s)found modules in multiple namespaces.*"conflict_one" in system partition: namespace_a, namespace_b.*"conflict_two" in system partition: namespace_a, namespace_b`,
+	)).RunTest(t)
+}
+
 func TestCrossPartitionRequiredModules(t *testing.T) {
 	result := android.GroupFixturePreparers(
 		android.PrepareForIntegrationTestWithAndroid,

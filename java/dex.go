@@ -367,7 +367,7 @@ var d8IncR8Clean = pctx.AndroidStaticRule("d8Incr8-partialcompileclean",
 	"outR8ArtProfile", "implicits", "outDepfile",
 )
 
-var d8IncR8, d8IncR8RE = pctx.MultiCommandRemoteStaticRules("d8Incr8",
+var d8IncR8, d8IncR8RE = pctx.MultiCommandRemoteStaticRulesWithLocalPool("d8Incr8",
 	blueprint.RuleParams{
 		Command: `mkdir -p "$outDir" "$outDir/packages" && ` +
 			`rm -rf "$outDict" "$outConfig" "${outUsageDir}" "${outDepfile}" && ` +
@@ -437,7 +437,7 @@ var d8IncR8, d8IncR8RE = pctx.MultiCommandRemoteStaticRules("d8Incr8",
 		},
 	}, []string{"outDir", "outDict", "outConfig", "outUsage", "outUsageZip", "outUsageDir",
 		"outDepfile", "d8Flags", "d8Deps", "r8Flags", "zipFlags", "mergeZipsFlags",
-		"resourcesOutput", "outR8ArtProfile"}, []string{"implicits"})
+		"resourcesOutput", "outR8ArtProfile"}, []string{"implicits"}, android.HighmemPool())
 
 var d8, d8RE = pctx.MultiCommandRemoteStaticRules("d8",
 	blueprint.RuleParams{
@@ -481,7 +481,7 @@ var d8r8Clean = pctx.AndroidStaticRule("d8r8-partialcompileclean",
 	"implicits", "outDepfile",
 )
 
-var d8r8, d8r8RE = pctx.MultiCommandRemoteStaticRules("d8r8",
+var d8r8, d8r8RE = pctx.MultiCommandRemoteStaticRulesWithLocalPool("d8r8",
 	blueprint.RuleParams{
 		Command: `rm -rf "$outDir" && mkdir -p "$outDir" && ` +
 			`rm -f "$outDict" && rm -f "$outConfig" && rm -rf "${outUsageDir}" && ` +
@@ -543,9 +543,9 @@ var d8r8, d8r8RE = pctx.MultiCommandRemoteStaticRules("d8r8",
 			Platform:     map[string]string{remoteexec.PoolKey: "${config.REJavaPool}"},
 		},
 	}, []string{"outDir", "outDict", "outConfig", "outUsage", "outUsageZip", "outUsageDir", "outDepfile",
-		"d8Flags", "r8Flags", "zipFlags", "mergeZipsFlags", "resourcesOutput", "outR8ArtProfile"}, []string{"implicits"})
+		"d8Flags", "r8Flags", "zipFlags", "mergeZipsFlags", "resourcesOutput", "outR8ArtProfile"}, []string{"implicits"}, android.HighmemPool())
 
-var r8, r8RE = pctx.MultiCommandRemoteStaticRules("r8",
+var r8, r8RE = pctx.MultiCommandRemoteStaticRulesWithLocalPool("r8",
 	blueprint.RuleParams{
 		Command: `rm -rf "$outDir" && mkdir -p "$outDir" && ` +
 			`rm -f "$outDict" && rm -f "$outConfig" && rm -rf "${outUsageDir}" && ` +
@@ -600,7 +600,7 @@ var r8, r8RE = pctx.MultiCommandRemoteStaticRules("r8",
 			Platform:     map[string]string{remoteexec.PoolKey: "${config.REJavaPool}"},
 		},
 	}, []string{"outDir", "outDict", "outConfig", "outUsage", "outUsageZip", "outUsageDir", "outDepfile",
-		"r8Flags", "zipFlags", "mergeZipsFlags", "resourcesOutput", "outR8ArtProfile"}, []string{"implicits"})
+		"r8Flags", "zipFlags", "mergeZipsFlags", "resourcesOutput", "outR8ArtProfile"}, []string{"implicits"}, android.HighmemPool())
 
 var proguardDictToProto = pctx.AndroidStaticRule("proguard_dict_to_proto", blueprint.RuleParams{
 	Command:         `${symbols_map} -r8 $in -location $location -write_if_changed $out`,

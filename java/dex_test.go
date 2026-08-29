@@ -92,6 +92,9 @@ func TestR8(t *testing.T) {
 		stableAppR8.Args["r8Flags"], "--android-platform-build")
 	android.AssertStringDoesContain(t, "expected --android-platform-build in core_platform_app r8 flags",
 		corePlatformAppR8.Args["r8Flags"], "--android-platform-build")
+	if pool := appR8.RuleParams.Pool; pool == nil || !strings.Contains(pool.String(), "highmem_pool") {
+		t.Errorf("expected local r8 rule to use highmem_pool, got %v", pool)
+	}
 }
 
 func TestR8TransitiveDeps(t *testing.T) {

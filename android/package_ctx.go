@@ -288,7 +288,20 @@ func (p PackageContext) RemoteStaticRules(name string, ruleParams blueprint.Rule
 // chained together with &&. commonArgs are args used for both the local and remotely executable
 // rules. reArgs are args used only for remote execution.
 func (p PackageContext) MultiCommandRemoteStaticRules(name string, ruleParams blueprint.RuleParams, reParams map[string]*remoteexec.REParams, commonArgs []string, reArgs []string) (blueprint.Rule, blueprint.Rule) {
+	return p.multiCommandRemoteStaticRules(name, ruleParams, reParams, commonArgs, reArgs, nil)
+}
+
+// MultiCommandRemoteStaticRulesWithLocalPool is like MultiCommandRemoteStaticRules, but assigns
+// local executions to localPool without limiting remotely executed actions to that pool.
+func (p PackageContext) MultiCommandRemoteStaticRulesWithLocalPool(name string, ruleParams blueprint.RuleParams, reParams map[string]*remoteexec.REParams, commonArgs []string, reArgs []string, localPool blueprint.Pool) (blueprint.Rule, blueprint.Rule) {
+	return p.multiCommandRemoteStaticRules(name, ruleParams, reParams, commonArgs, reArgs, localPool)
+}
+
+func (p PackageContext) multiCommandRemoteStaticRules(name string, ruleParams blueprint.RuleParams, reParams map[string]*remoteexec.REParams, commonArgs []string, reArgs []string, localPool blueprint.Pool) (blueprint.Rule, blueprint.Rule) {
 	ruleParamsRE := ruleParams
+	if localPool != nil {
+		ruleParams.Pool = localPool
+	}
 	for k, v := range reParams {
 		ruleParams.Command = strings.ReplaceAll(ruleParams.Command, k, "")
 		ruleParamsRE.Command = strings.ReplaceAll(ruleParamsRE.Command, k, v.Template())
