@@ -215,6 +215,8 @@ vendor\.google_clockwork\.displayoffload3\..*
 
 # MTK adds
 com\.mediatek
+com\.mediatek\.internal\.telephony
+com\.mediatek\.internal\.telephony\..*
 com\.mediatek\..*
 mediatek
 mediatek\..*
