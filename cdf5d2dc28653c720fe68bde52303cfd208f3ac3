@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf0b902b_a17757fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000090
+      },
+      "writtenOn": "2026-10-03T12:48:31Z",
+      "side": 1,
+      "message": "https://review.pixelos.net/c/PixelOS-AOSP/android_build_soong/+/7383\nthere was this before",
+      "revId": "cdf5d2dc28653c720fe68bde52303cfd208f3ac3",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    }
+  ]
+}
