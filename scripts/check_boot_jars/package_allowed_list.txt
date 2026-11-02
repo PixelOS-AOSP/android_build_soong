@@ -214,6 +214,7 @@ vendor\.google_clockwork\.displayoffload3
 vendor\.google_clockwork\.displayoffload3\..*
 
 # MTK adds
+com\.color\.inner\.view
 com\.mediatek
 com\.mediatek\..*
 mediatek
